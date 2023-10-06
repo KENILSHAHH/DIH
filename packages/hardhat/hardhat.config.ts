@@ -14,7 +14,6 @@ const deployerPrivateKey =
   process.env.DEPLOYER_PRIVATE_KEY ?? "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
 // If not set, it uses ours Etherscan default API key.
 
-
 const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.17",
@@ -100,10 +99,9 @@ const config: HardhatUserConfig = {
     },
   },
 
-    etherscan: {
-      apiKey:{goerli:"6NKVXAYNC5P4NK2P5PI1WGZ4DMAVT56S93"} ,
-    },
- 
+  etherscan: {
+    apiKey: { goerli: "6NKVXAYNC5P4NK2P5PI1WGZ4DMAVT56S93" },
+  },
 };
 
 export default config;

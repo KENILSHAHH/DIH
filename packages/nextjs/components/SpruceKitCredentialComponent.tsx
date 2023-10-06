@@ -1,6 +1,6 @@
-import { SSX } from "@spruceid/ssx";
 import { useEffect, useState } from "react";
 import { toCredentialEntry } from "../utils/scaffold-eth/rebase";
+import { SSX } from "@spruceid/ssx";
 
 interface ICredentialComponent {
   ssx: SSX;
@@ -14,14 +14,14 @@ const SpruceKitCredentialComponent = ({ ssx }: ICredentialComponent) => {
   const handleGetContent = async (content: string) => {
     setLoading(true);
     try {
-      const contentName = content.replace('nextjs/', '')
+      const contentName = content.replace("nextjs/", "");
       const { data } = await ssx.credentials.get(contentName);
       setViewingContent(`${content}:\n${JSON.stringify(toCredentialEntry(data), null, 2)}`);
     } catch (e) {
       console.error(e);
     }
     setLoading(false);
-  }
+  };
 
   useEffect(() => {
     const getCredentialList = async () => {
@@ -46,22 +46,15 @@ const SpruceKitCredentialComponent = ({ ssx }: ICredentialComponent) => {
             <tr key={i}>
               <td>{credential}</td>
               <td>
-                <button
-                  onClick={() => handleGetContent(credential)}
-                  disabled={loading}
-                >
-                  <span>
-                    GET
-                  </span>
+                <button onClick={() => handleGetContent(credential)} disabled={loading}>
+                  <span>GET</span>
                 </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <pre style={{ marginTop: 25 }}>
-        {viewingContent}
-      </pre>
+      <pre style={{ marginTop: 25 }}>{viewingContent}</pre>
     </div>
   );
 };
