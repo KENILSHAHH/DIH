@@ -43,10 +43,12 @@ const Home: React.FC<PageProps> = ({childComponent}) => {
     
     <div className="text-center">
       <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        MyNFTMyChain
+        WalletPassport
       </h1>
        <p className="mt-6 text-2xl leading-8 text-gray-600">
-     I have my SBT on ethereum, oh wait i forgot i will never spend this high, it must be on polygon, wait which address did i claim it on????, TF i dont remember, where is it!!!!!!!!!!
+                Do an airdrop? Want a payroll? with the security of blockchain ? Hell no this aint possible
+                With your gas fees sponsored? Are you kidding me?
+                
               </p>
       <p className="mt-6 text-2xl leading-8 text-gray-600">
    

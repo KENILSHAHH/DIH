@@ -44,9 +44,9 @@ export const Header = () => {
         <NavLink href="/">Home</NavLink>
       </li>
       <li>
-        <NavLink href="/preference">
+        <NavLink href="/payroll">
           <BugAntIcon className="h-4 w-4" />
-          Set my Preferences
+          Payroll
         </NavLink>
       </li>
       <li>
