@@ -1,14 +1,6 @@
 import React from 'react'
 import { KeyDIDMethod, createAndSignCredentialJWT } from "@jpmorganchase/onyx-ssi-sdk";
-import { camelCase } from "lodash";
-import path from "path";
-import {
-  HOLDER_EDDSA_PRIVATE_KEY,
-  ISSUER_EDDSA_PRIVATE_KEY,
-  VC_DIR_PATH,
-} from "../../config";
 import { privateKeyBufferFromString } from "../utils/convertions";
-import { writeToFile } from "../utils/writer";
 function generateCredential() {
 
 const createVc = async () => {
