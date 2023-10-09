@@ -8,7 +8,9 @@ import SSXComponent from "~~/components/SSXComponent";
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from "react";
-
+import lens from './assets/lens.png'
+import onyx from './assets/onyx.png'
+import zksync from './assets/zksync.png'
 const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
@@ -43,24 +45,34 @@ const Home: React.FC<PageProps> = ({childComponent}) => {
     
     <div className="text-center">
       <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        WalletPassport
+        LensDao
       </h1>
        <p className="mt-6 text-2xl leading-8 text-gray-600">
-                Do an airdrop? Want a payroll? with the security of blockchain ? Hell no this aint possible
-                With your gas fees sponsored? Are you kidding me?
+                Got a lens handle?
+                Join the DAO to claim exclusive benefits with all the gas fees sponsored
                 
               </p>
       <p className="mt-6 text-2xl leading-8 text-gray-600">
    
               </p>
-               <p className="mt-6 text-lg leading-8 text-gray-600">Well we've got you covered</p>
+              <div  style={{width:"100px",display:"flex", alignItems:"center", justifyContent:"center", marginLeft:"270px"}}>
+              <img className="m-6" src={lens.src} />
+              <img className="m-6" src={zksync.src} />
+                <img className="m-6" style={{width:"150px",
+              height:"75px"}} src={onyx.src} />
+                  </div>   
       <div className="mt-10 flex items-center justify-center gap-x-6">
-        <a
-          href="#"
-          className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >
-        Set your preferences
-        </a>
+  <button  className="btn btn-primary" onClick={() => (document.getElementById('my_modal_2') as HTMLDialogElement)?.showModal()}>Verify your lens handle</button>
+						<dialog id="my_modal_2" className="modal">
+  <div className="modal-box">
+								<h3 className="font-bold text-lg">You have more than 3 followers </h3>
+								<p className="py-4">You are eligble to get onyx credentials</p>
+								<button  className="btn btn-neutral" >Get onyx credentials and enter the LensDao</button>
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    
+  </form>
+</dialog>
       
       </div>
     </div>
